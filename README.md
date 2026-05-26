@@ -53,7 +53,7 @@ MONGODB_URI=mongodb://localhost:27017/libraryManagementSystem
 
  1. Create new member : `POST  http://localhost:3000/api/v1/member`
 example of data : 
-```
+
 {
 
 "name":  "Lily Luo",
@@ -73,7 +73,7 @@ example of data :
 "membershipNumber":  "MEM202400015"
 
 }
-```
+
 
 2.Get all loans : GET http://localhost:3000/api/v1/loans/
 3.Cancel a reservation : PATCH http://localhost:3000/api/v1/reservations/cancel/6a15e6b3b14659938642f257
