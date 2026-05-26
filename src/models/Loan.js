@@ -98,13 +98,11 @@ loanSchema.virtual("fineCalculated").get(function() {
 })
 
 loanSchema.methods.calculateFine = function() {
-    if (this.status === "active" || this.status === "returned") {
         const daysOverDue = this.currentOverdueDays;
         this.fines.totalFineDays = daysOverDue;
         this.fines.totalFineAmount = daysOverDue * this.fines.finePerDay;
         return this.fines.totalFineAmount;
-      }
-      return 0;
+   
 }
 
 module.exports = mongoose.model("Loan", loanSchema);

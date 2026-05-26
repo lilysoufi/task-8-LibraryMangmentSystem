@@ -72,10 +72,10 @@ class loanController {
             return res.status(404).json({ message : "Loan not found" })
         }
 
-        const fineAmount = loan.fines.totalFineAmount;
+        loan.fines.totalFineAmount = loan.calculateFine();
         await loan.save();
-  
-        res.status(200).json({ message : "Fine amount returned successfully" , fineAmount})
+
+        res.status(200).json({ message : "Fine amount returned successfully" , fineAmount : loan.fines.totalFineAmount })
     }
 
     static updateLoan = async ( req , res ) => {
