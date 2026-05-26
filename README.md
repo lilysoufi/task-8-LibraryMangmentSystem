@@ -77,8 +77,11 @@ example of data :
 ```
 
 2.Get all loans : GET http://localhost:3000/api/v1/loans/
+
 3.Cancel a reservation : PATCH http://localhost:3000/api/v1/reservations/cancel/6a15e6b3b14659938642f257
+
 5.Update a review : PUT http://localhost:3000/api/v1/reviews/6a144f763093b7a3c320440b
+
 6.Get book by Id : GET http://localhost:3000/api/v1/books/6a1621b193792d8e85f801cd
 
 ## 📚 Design Document
