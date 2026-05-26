@@ -86,7 +86,7 @@ example of data :
 For detailed database design and architecture, see:
 
 -   **[DATABASE_DESIGN.md](DATABASE_DESIGN.md)** - Complete schema design with relationships
--  **[diagram](diagram.png)** 
+-  **[diagram](Diagram.svg)** 
 
 
 ## 👥 Author
