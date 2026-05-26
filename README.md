@@ -9,7 +9,6 @@ A comprehensive RESTful API for managing library operations including user manag
 - **Loan System** - Borrow, return, and track materials with fine calculation
 - **Reservation System** - Reserve unavailable materials with queue priority
 - **Review System** - Rate materials (1-5 stars) and write reviews
-- **Authentication** - JWT-based authentication and authorization
 - **Fine Calculation** - Automatic fine calculation for overdue items
 
 ## ⚙️ Setup & Installation
@@ -75,6 +74,7 @@ example of data :
 
 }
 ```
+
 2.Get all loans : GET http://localhost:3000/api/v1/loans/
 3.Cancel a reservation : PATCH http://localhost:3000/api/v1/reservations/cancel/6a15e6b3b14659938642f257
 5.Update a review : PUT http://localhost:3000/api/v1/reviews/6a144f763093b7a3c320440b
