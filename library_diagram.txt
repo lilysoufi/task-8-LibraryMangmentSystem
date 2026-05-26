@@ -1,0 +1,33 @@
+                 ┌──────────────┐                                        ┌─────────────┐               
+                 │User          │                                        │Library      │               
+                 ├──────────────┤                                        ├─────────────┤               
+                 │+ name        │                                        │+ name       │               
+                 │+ phone       │                                        │+ description│               
+                 │+ registeredAt│                                        │+ location   │               
+                 │+ password    │                                        │+ hoursWork  │               
+                 │+ userType    │                                        │+ avgRate    │               
+                 └──────────────┘                                        └─────────────┘               
+                                                                                                       
+                                                                                                       
+                                                            ┌─────────────────┐                        
+┌───────────────────────┐  ┌──────────────────┐             │Material         │                        
+│Librarian              │  │Member            │             ├─────────────────┤                        
+├───────────────────────┤  ├──────────────────┤             │+ title          │                        
+│+ officeLocation       │  │+ address         │             │+ publisher      │                        
+│+ responsibleDepartment│  │+ dateOfBirth     │             │+ totalCopies    │                        
+│+ hireDate             │  │+ membershipNumber│             │+ availableCopies│                        
+└───────────────────────┘  └──────────────────┘             │+ reservedCopies │                        
+            |                                               │+ materialType   │                        
+            |                                               └─────────────────┘                        
+            |                                                                                          
+            |                                       ┌─────────────┐                                    
+   ┌─────────────────┐                              │Magazine     │                                    
+   │Loan             │  ┌───────────────────────┐   ├─────────────┤   ┌─────────────────┐              
+   ├─────────────────┤  │Reservation            │   │+ issueNumber│   │Book             │   ┌─────────┐
+   │+ loanDate       │  ├───────────────────────┤   │+ month      │   ├─────────────────┤   │Review   │
+   │+ dueDate        │  │+ reservedAt           │   │+ year       │   │+ author         │   ├─────────┤
+   │+ status         │  │+ queuePriority        │   │+ volume     │   │+ category       │   │+ rating │
+   │+ finePerDay     │  │+ notifiedWhenAvailable│   │+ issn       │   │+ isbn           │   │+ comment│
+   │+ totalFineAmount│  │+ autoCancelAfter      │   │+ editor     │   │+ publicationYear│   └─────────┘
+   │+ paymentStatus  │  └───────────────────────┘   │+ frequency  │   └─────────────────┘              
+   └─────────────────┘                              └─────────────┘                                    
