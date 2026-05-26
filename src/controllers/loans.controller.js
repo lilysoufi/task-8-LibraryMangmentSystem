@@ -61,7 +61,7 @@ class loanController {
         }
         await material.save();
    
-        res.status(201).json({ message : "Loan created successfully" , loan : newLoan.populate("materialId" , "title").populate("memberId" , "name").populate("employeeId" , "name") });
+        res.status(201).json({ message : "Loan created successfully" , loan : newLoan });
 
     }
 
@@ -72,7 +72,7 @@ class loanController {
             return res.status(404).json({ message : "Loan not found" })
         }
 
-        const fineAmount = loan.calculateFine();
+        const fineAmount = loan.fines.totalFineAmount;
         await loan.save();
   
         res.status(200).json({ message : "Fine amount returned successfully" , fineAmount})
@@ -95,7 +95,7 @@ class loanController {
         loan.fines = fines || loan.fines;
         loan.paymentStatus = paymentStatus || loan.paymentStatus;
         await loan.save();
-        res.status(200).json({ message : "Loan updated successfully" , loan : loan.populate("materialId" , "title").populate("memberId" , "name").populate("employeeId" , "name") })
+        res.status(200).json({ message : "Loan updated successfully" , loan : loan })
     }
     static returnLoan = async ( req, res) => {
         const { id } = req.params;
@@ -110,10 +110,7 @@ class loanController {
         await loan.save();
 
         res.status(200).json({ message : "Loan returned successfully" ,
-             loan : loan
-            .populate("materialId" , "title -_id")
-            .populate("memberId" , "name -_id")
-            .populate("employeeId" , "name -_id") })
+             loan : loan })
     }
 
     static deleteLoan = async ( req , res ) => {
@@ -123,10 +120,7 @@ class loanController {
             return res.status(404).json({ message : "Loan to be deleted not found" })
         }
         res.status(200).json({ message : "Loan deleted successfully" ,
-            data :  loan
-            .populate("materialId" , "title -_id")
-            .populate("memberId" , "name -_id")
-            .populate("employeeId" , "name -_id ") })
+            data :  loan })
     }
 }
 
