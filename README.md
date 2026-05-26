@@ -17,23 +17,23 @@ A comprehensive RESTful API for managing library operations including user manag
 
 - Node.js (v18 or higher)
 - MongoDB (v6 or higher)
-- npm or yarn
+- npm 
 
 ### Installation Steps
 
 ```bash
 # 1. Clone the repository
 git clone https://github.com/lilysoufi/task-8-LibraryMangmentSystem.git
-cd library-management-system
+
 
 # 2. Install dependencies
 npm install
 
 # 3. Set up environment variables
-cp .env.example .env
+ .env.example .env
 
 # 4. Start MongoDB (if running locally)
-mongod
+mongodb
 
 # 5. Run the application
 npm run watch
